@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>New Tab</title>
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="title">
+                <span>===<p id="greeting"></p>, mili===</span>
+            </div>
+            <div class="time">
+                <span>=>><p id="date"></p><<=</span>
+                <span>=>> <p id="hours"></p><p class="blink">:</p><p id="minutes"></p> <<=</span>
+            </div>
+            <div class="links">
+                <div class="groups">
+
+                    <div class="group">
+                        <div class="group-title" onclick="toggleMenu(0)">
+                            <span>==Work==</span>
+                        </div>
+                        <div class="group-links hidden" id="links">
+                            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">Github</a>
+                            <a href="https://gitlab.com/" target="_blank" rel="noopener noreferrer">Gitlab</a>
+                            <a href="https://trello.com/" target="_blank" rel="noopener noreferrer">Trello</a>
+                            <a href="https://mail.google.com/mail/u/1/?pli=1#inbox" target="_blank" rel="noopener noreferrer">Gmail</a>
+                            <a href="https://qiwi.com/" target="_blank" rel="noopener noreferrer">Qiwi</a>
+                            <div class="back" onclick="back()"> <== Back</div>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <div class="group-title" onclick="toggleMenu(1)">
+                            <span>==FFXIV==</span>
+                        </div>
+                        <div class="group-links hidden" id="links">
+                            <a href="https://secure.square-enix.com/account/app/svc/mogstation" target="_blank" rel="noopener noreferrer">Mogstation</a>
+                            <a href="https://ffxivteamcraft.com/" target="_blank" rel="noopener noreferrer">Teamcraft</a>
+                            <a href="https://ffxiv.eorzeacollection.com/glamours" target="_blank" rel="noopener noreferrer">Glamour Collection</a>
+                            <a href="https://www.xivmodarchive.com/" target="_blank" rel="noopener noreferrer">XMA</a>
+                            <a href="https://www.glamourdresser.com/" target="_blank" rel="noopener noreferrer">Glamour Dresser</a>
+                            <a href="https://www.fflogs.com/" target="_blank" rel="noopener noreferrer">FF Logs</a>
+                            <a href="https://xivanalysis.com/" target="_blank" rel="noopener noreferrer">xiv analysis</a>
+                            <div class="back" onclick="back()"> <== Back</div>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <div class="group-title" onclick="toggleMenu(2)">
+                            <span>==Uni==</span>
+                        </div>
+                        <div class="group-links hidden" id="links">
+                            <a href="https://online-edu.mirea.ru/" target="_blank" rel="noopener noreferrer">edu.mirea</a>
+                            <a href="https://lk.mirea.ru/livestream/" target="_blank" rel="noopener noreferrer">lk.mirea</a>
+                            <div class="back" onclick="back()"> <== Back</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="groups">
+
+                    <div class="group">
+                        <div class="group-title" onclick="toggleMenu(3)">
+                            <span>==Entertainment==</span>
+                        </div>
+                        <div class="group-links hidden" id="links">
+                            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">Youtube</a>
+                            <a href="http://vk.com/" target="_blank" rel="noopener noreferrer">VK</a>
+                            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter</a>
+                            <a href="https://ru.pinterest.com/" target="_blank" rel="noopener noreferrer">Pinterest</a>
+                            <a href="https://www.reddit.com/" target="_blank" rel="noopener noreferrer">Reddit</a>
+                            <div class="back" onclick="back()"> <== Back</div>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <div class="group-title" onclick="toggleMenu(4)">
+                            <span>==Other==</span>
+                        </div>
+                        <div class="group-links hidden" id="links">
+                            <a href="http://a-n-t.ru/" target="_blank" rel="noopener noreferrer">A-N-T</a>
+                            <div class="back" onclick="back()"> <== Back</div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                
+                
+            </div>
+            <!-- <div class="background">
+                <img src="https://media.tenor.com/hvU8c92x3qcAAAAC/anime.gif" alt="">
+            </div> -->
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>

@@ -1,0 +1,156 @@
+body {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Fira Code', monospace;
+    background-color: rgb(40, 40, 40);
+    color: rgb(255, 255, 217);
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ), url("https://media.tenor.com/hvU8c92x3qcAAAAC/anime.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container { 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    background-image: linear-gradient(
+        to bottom,
+        #404dbf5f,
+        #b852a580
+      );
+    border-radius: 1em;
+    margin-left: 1rem;
+    padding: 1rem;
+    min-width: 50%;
+}
+
+.background {
+    background-color: rgba(0, 0, 0, 0.415);
+    position: absolute;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: rgb(251, 251, 194);
+}
+
+.title span {
+    display: flex;
+    align-items: center;
+}
+
+.time {
+    display: flex;
+    justify-content: space-evenly;
+    color: rgb(251, 251, 194)
+}
+
+.time span{
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+}
+
+.blink {
+    animation: blink-animation 5s steps(5, start) infinite;
+    -webkit-animation: blink-animation 5s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+@-webkit-keyframes blink-animation{
+    to {
+        visibility: hidden;
+    }
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 10px;
+}
+
+.groups {
+    display: flex;
+    flex: 1 1 100%;
+    justify-content: space-evenly;
+}
+
+.group {
+    padding: 10px;
+}
+
+.group-title {
+    margin-bottom: 10px;
+    padding: 5px;
+    color: rgb(251, 251, 194);
+    text-decoration: underline 2px;
+    transition: backgound-color ease-in 200ms,
+                color ease-in 200ms,
+                opacity ease-out 50s;
+}
+
+.group-title-active {
+    margin-bottom: 10px;
+    padding: 5px;
+    color: rgb(251, 251, 194);
+    text-decoration: underline 2px;
+}
+
+.group-title:hover {
+    text-decoration: none;
+    color: black;
+    background-color: rgb(251, 251, 194);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.group-links {
+    display: grid;
+    transition: opacity ease-in 200ms;
+}
+
+a, .back {
+    text-decoration: none;
+    color: rgb(251, 251, 194);
+    margin-bottom: 10px;
+    padding: 5px;
+    transition: background-color ease-in 200ms;
+}
+
+.group-links a:hover, .back:hover {
+    background-color: rgb(251, 251, 194);
+    border-radius: 5px;
+    color: black
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
