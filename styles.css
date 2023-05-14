@@ -52,6 +52,10 @@ body {
 .title span {
     display: flex;
     align-items: center;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE/Edge */
+    user-select: none;
 }
 
 .time {
@@ -64,6 +68,10 @@ body {
     display: flex;
     align-items: center;
     font-size: 25px;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE/Edge */
+    user-select: none;
 }
 
 .blink {
@@ -86,6 +94,10 @@ body {
     flex-wrap: wrap;
     text-align: center;
     padding: 10px;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE/Edge */
+    user-select: none;
 }
 
 .groups {
