@@ -1,2 +1,4 @@
 # custom-newtab
-A minimalistic custom newtab for Firefox
+A minimalistic, pretty custom newtab for Firefox
+
+![](screenshot.png)
