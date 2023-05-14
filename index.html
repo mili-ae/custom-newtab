@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    
     <title>New Tab</title>
 </head>
 <body>
@@ -16,7 +17,7 @@
             <div class="title">
                 <span>===<p id="greeting"></p>, mili===</span>
             </div>
-            <div class="time">
+            <div class="time" onclick="toggleAMPM()">
                 <span>=>><p id="date"></p><<=</span>
                 <span>=>> <p id="hours"></p><p class="blink">:</p><p id="minutes"></p> <<=</span>
             </div>
