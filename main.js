@@ -2,7 +2,7 @@ function refreshTime() {
     var hoursDisplay = document.getElementById("hours");
     var minutesDisplay = document.getElementById("minutes");
     var dateDisplay = document.getElementById("date");
-    var cookie = getCookie("ampm");
+    var item = localStorage.getItem("ampm");
     
     var time = new Date();
     var hours = time.getHours();
@@ -13,8 +13,8 @@ function refreshTime() {
     if (hours < 10) { hours = "0" + hours };
     if (minutes < 10) { minutes = "0" + minutes };
 
-    hoursDisplay.innerHTML = cookie != "true" ? hours : formattedAMPMTime[0];
-    minutesDisplay.innerHTML = cookie != "true" ? minutes : formattedAMPMTime[1] + formattedAMPMTime[2];
+    hoursDisplay.innerHTML = item != "true" ? hours : formattedAMPMTime[0];
+    minutesDisplay.innerHTML = item != "true" ? minutes : formattedAMPMTime[1] + formattedAMPMTime[2];
     dateDisplay.innerHTML = date
 }
 
@@ -107,37 +107,9 @@ function formatAMPM(currentTime) {
 }
 
 function toggleAMPM() {
-    if (getCookie("ampm") == null) { setCookie("ampm", "true", 10000); };
-    cookie = getCookie("ampm");
-    if (cookie == "true") { setCookie("ampm", "false", 10000); return; };
-
-    document.cookie = setCookie("ampm", "true", 10000);
-}
-
-function getCookie(cookieName) {
-    const name = cookieName + "=";
-    const decodedCookie = decodeURIComponent(document.cookie);
-    const cookieArray = decodedCookie.split(';');
-  
-    for (let i = 0; i < cookieArray.length; i++) {
-      let cookie = cookieArray[i];
-      while (cookie.charAt(0) === ' ') {
-        cookie = cookie.substring(1);
-      }
-      if (cookie.indexOf(name) === 0) {
-        return cookie.substring(name.length, cookie.length);
-      }
-    }
-    return null;
-  }
-
-function setCookie(cookieName, cookieValue, daysToExpire) {
-    const expirationDate = new Date();
-    expirationDate.setDate(expirationDate.getDate() + daysToExpire);
-  
-    const cookie = `${encodeURIComponent(cookieName)}=${encodeURIComponent(cookieValue)};expires=${expirationDate.toUTCString()};path=/`;
-  
-    document.cookie = cookie;
+    if (localStorage.getItem("ampm") == null) { localStorage.setItem("ampm", "false") };
+    if (localStorage.getItem("ampm") == "true") { localStorage.setItem("ampm", "false"); return };
+    localStorage.setItem("ampm", "true");
 }
 
 
