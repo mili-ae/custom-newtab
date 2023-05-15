@@ -7,6 +7,6 @@ A minimalistic, pretty custom newtab for Firefox
 
 ## Usage
 
-Restore `browser.newtab.url` functionality by using [using this repo](https://github.com/xiaoxiaoflood/firefox-scripts) and in `about.config` set your `browser.newtab.url` to `file:///path/to/this/repo/folder/index.html`
+Restore `browser.newtab.url` functionality by [using this repo](https://github.com/xiaoxiaoflood/firefox-scripts) and in `about:config` set your `browser.newtab.url` to `file:///path/to/this/repo/folder/index.html`
 
 
